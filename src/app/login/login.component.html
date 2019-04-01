@@ -6,23 +6,28 @@
           <mat-card-title>Sign In</mat-card-title>
         </mat-card-header>
         <mat-card-content>
+          
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Username</mat-label>
-              <input matInput placeholder="Enter username" [(ngModel)]="Username" />
+              <input matInput placeholder="Enter username" [(ngModel)]="Username" required />
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
-              <input matInput placeholder="Enter password" type="password" [(ngModel)]="Password" />
+              <input matInput placeholder="Enter password" type="password" [(ngModel)]="Password" required/>
             </mat-form-field>
           </p>
           <p>
             <button mat-flat-button color="primary" (click)="OnLogin()" matTooltip="Login to admin portal"
               aria-label="Button that submits user credentials while login">Submit</button>
           </p>
+          
         </mat-card-content>
       </mat-card>
     </div>
+  </div>
+  <div class="alert alert-danger" role="alert">
+    This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
   </div>

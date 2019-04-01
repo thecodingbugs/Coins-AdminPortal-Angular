@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,14 @@ export class LoginComponent implements OnInit {
 
   public Username: string;
   public Password: string;
-  constructor(public dialog: MatDialog) { }
+  public loginForm: FormGroup;
+
+  constructor(public dialog: MatDialog) {
+    this.loginForm = new FormGroup({
+      Username: new FormControl('', [Validators.required]),
+      Password: new FormControl('', [Validators.required]),
+    });
+  }
 
   ngOnInit() {
   }
