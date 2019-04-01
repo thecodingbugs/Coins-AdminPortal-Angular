@@ -9,17 +9,18 @@
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Username</mat-label>
-              <input matInput placeholder="Enter username">
+              <input matInput placeholder="Enter username" [(ngModel)]="Username" />
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
-              <input matInput placeholder="Enter password" type="password">
+              <input matInput placeholder="Enter password" type="password" [(ngModel)]="Password" />
             </mat-form-field>
           </p>
           <p>
-            <button mat-flat-button color="primary" (click)="OnLogin()">Submit</button>
+            <button mat-flat-button color="primary" (click)="OnLogin()" matTooltip="Login to admin portal"
+              aria-label="Button that submits user credentials while login">Submit</button>
           </p>
         </mat-card-content>
       </mat-card>
