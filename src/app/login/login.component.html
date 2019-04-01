@@ -1,0 +1,27 @@
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="center center" class="content">
+    <div class="item item-3" fxFlex="30%" fxLayoutGap="10px">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Sign In</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Enter username">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Enter password" type="password">
+            </mat-form-field>
+          </p>
+          <p>
+            <button mat-flat-button color="primary" (click)="OnLogin()">Submit</button>
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
